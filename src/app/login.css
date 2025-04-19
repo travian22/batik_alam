@@ -21,7 +21,7 @@ body {
     width: 100%;
 }
 .login-image {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/public/image/bikin_batik1.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/batik_alam/public/image/bikin_batik1.jpg') center/cover no-repeat;
     border-radius: 15px 0 0 15px;
     min-height: 500px;
     display: flex;
