@@ -1,0 +1,209 @@
+:root {
+    --primary-color: #5D4037;
+    --secondary-color: #8D6E63;
+    --accent-color: #FFAD60;
+    --light-color: #EFEBE9;
+    --dark-color: #3E2723;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #3E2723;
+    background-color: #EFEBE9;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    position: relative;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.page-section {
+    padding: 60px 0;
+}
+
+.feature-icon {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.gallery-img {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#content-container {
+    min-height: 70vh;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(141, 110, 99, 0.1);
+}
+
+.logo{
+    transform: translateY(-2px);
+}
+
+.social-icons-kontak a {
+    color: brown;
+    margin-right: 15px;
+    font-size: 1.2rem; /* Mengatur warna ikon menjadi coklat */
+}
+
+/* Add these styles to your styles.css file */
+
+/* Normal state of nav links */
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+/* Hover effect - changes text color */
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Add an underline effect on hover */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 70%;
+}
+
+/* Active state for current page */
+.navbar-nav .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 70%;
+    background-color: var(--accent-color);
+}
+
+/* Styling khusus untuk menu Pesanan */
+.navbar-nav .pesanan-btn {
+    background-color: #A67C52;
+    color: white !important;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.navbar-nav .pesanan-btn:hover {
+    background-color: #8B5A2B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.pesanan-icon {
+    margin-right: 5px;
+}
+
+/* Efek pulsing untuk menarik perhatian */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.navbar-nav .pesanan-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 992px) {
+    .navbar-nav .pesanan-btn {
+        margin: 10px 0;
+        text-align: center;
+    }
+}

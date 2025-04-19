@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batik Alam - Kerajinan Batik Eco-Friendly</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/src/app/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/src/app/styles.css">
+    <link rel="stylesheet" href="/login-system/login.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="/src/components/index.html">
+                    <img src="/public/image/logo_192x192.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Batik Alam
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/components/index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/components/tentang.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/components/produk.html">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/components/galeri.html">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/src/components/kontak.html">Kontak</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pesanan-btn" href="/src/components/pesanan.html">
+                                <span class="pesanan-icon"><i class="fas fa-shopping-cart"></i></span>
+                                Pesanan
+                            </a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link login-btn active" href="/login-system/login.html">
+                                <span class="login-icon"><i class="fas fa-user"></i></span>
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Login Section -->
+    <section class="login-container">
+        <div class="login-card">
+            <div class="row g-0">
+                <div class="col-lg-6 login-image">
+                    <div class="login-image-text">
+                        <h2>Batik Alam</h2>
+                        <p>Melestarikan warisan budaya Indonesia melalui batik tulis tradisional berkualitas premium</p>
+                    </div>
+                    <div class="batik-pattern"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="login-form">
+                        <div class="login-header">
+                            <img src="/public/image/logo_192x192.png" alt="Batik Alam Logo" class="rounded-circle">
+                            <h2>Selamat Datang</h2>
+                            <p class="text-muted">Silakan login untuk melanjutkan</p>
+                        </div>
+                        <form>
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="remember">
+                                    <label class="form-check-label" for="remember">Ingat saya</label>
+                                </div>
+                                <a href="#" class="forgot-password">Lupa password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-login w-100">Masuk</button>
+                        </form>
+                        
+                        <div class="divider">
+                            <span class="divider-text">atau masuk dengan</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <a href="#" class="social-btn google">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="register-link">
+                            <p>Belum punya akun? <a href="register.html">Daftar sekarang</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Batik Alam. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

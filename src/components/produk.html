@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batik Alam - Kerajinan Batik Eco-Friendly</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../app/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../app/styles.css">
+    <script src="script.js"></script>
+    <script src="../app/product-filter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="/src/app/kirim_email.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/public/image/logo_192x192.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                Batik Alam
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../components/index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pesanan-btn" href="pesanan.html">
+                            <span class="pesanan-icon"><i class="fas fa-shopping-cart"></i></span>
+                            Pesanan
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link login-btn active" href="/login-system/login.html">
+                            <span class="login-icon"><i class="fas fa-user"></i></span>
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HALAMAN PRODUK -->
+    <div id="produk-page">
+        <section class="page-section">
+            <div class="container">
+                <h1 class="section-title">Katalog Produk</h1>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cari produk..." id="searchProduct">
+                            <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end">
+                            <select class="form-select w-50" id="filterCategory">
+                                <option value="all">Semua Kategori</option>
+                                <option value="kain">Kain Batik</option>
+                                <option value="baju">Baju Batik</option>
+                                <option value="aksesoris">Aksesoris</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Kain Batik -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/batik_parang.jpg" alt="Batik Parang" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Kain Batik</span>
+                                <h5 class="card-title">Batik Parang Hitam</h5>
+                                <p class="card-text">Batik dengan motif parang klasik dan sentuhan warna hitam alami dari Daun duwet.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-ruler me-2"></i>2 meter x 1,15 meter</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Daun duwet</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 450.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/batik_kawung.jpg" alt="Batik Kawung" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Kain Batik</span>
+                                <h5 class="card-title">Batik Kawung Coklat</h5>
+                                <p class="card-text">Motif kawung tradisional dengan pewarna alami dari kulit kayu mahoni.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-ruler me-2"></i>2 meter x 1,15 meter</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Kulit Kayu Mahoni</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 425.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/batik_megamendung.png" alt="Batik Megamendung" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Kain Batik</span>
+                                <h5 class="card-title">Batik Megamendung</h5>
+                                <p class="card-text">Batik dengan motif megamendung khas Cirebon dengan warna indigo alami.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-ruler me-2"></i>2 meter x 1,15 meter</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Tanaman Indigo</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 475.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Baju Batik -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/kemeja_batik.jpg" alt="Kemeja Batik Pria" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Baju Batik</span>
+                                <h5 class="card-title">Kemeja Batik Pria Klasik</h5>
+                                <p class="card-text">Kemeja lengan panjang dengan motif batik klasik, cocok untuk acara formal.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-tshirt me-2"></i>Ukuran: M, L, XL</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Kulit Jolawe</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 350.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/dress_batik.jpg" alt="Dress Batik" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Baju Batik</span>
+                                <h5 class="card-title">Dress Batik Modern</h5>
+                                <p class="card-text">Dress batik modern dengan potongan A-line, nyaman dan elegan.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-tshirt me-2"></i>Ukuran: S, M, L</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Daun Indigofera</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 395.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/blazer_batik.jpg" alt="Blazer Batik" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Baju Batik</span>
+                                <h5 class="card-title">Blazer Batik Premium</h5>
+                                <p class="card-text">Blazer dengan paduan batik premium, cocok untuk acara formal dan semi-formal.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-tshirt me-2"></i>Ukuran: M, L, XL</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Kayu Secang</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 675.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aksesoris -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/masker_batik.jpg" alt="Masker Batik" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Aksesoris</span>
+                                <h5 class="card-title">Masker Batik Eco-Friendly</h5>
+                                <p class="card-text">Masker kain 3 lapis dari material batik ramah lingkungan.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-layer-group me-2"></i>3 lapis</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Kunyit</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 45.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="/public/image/produk/tas_batik.jpg" alt="Tas Batik" class="card-img-top product-img">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Aksesoris</span>
+                                <h5 class="card-title">Tas Batik Multifungsi</h5>
+                                <p class="card-text">Tas batik serba guna dengan kualitas jahitan premium.</p>
+                                <ul class="list-unstyled">
+                                    <li><small><i class="fas fa-expand-arrows-alt me-2"></i>30cm x 40cm</small></li>
+                                    <li><small><i class="fas fa-tint me-2"></i>Pewarna: Kulit Mangga</small></li>
+                                </ul>
+                                <p class="text-primary fw-bold">Rp 175.000</p>
+                                <a href="pesanan.html" class="btn btn-primary w-100">Pesan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h4>Batik Alam</h4>
+                        <p>Kerajinan batik eco-friendly dengan pewarna alami, melestarikan warisan budaya Indonesia dengan sentuhan modern dan ramah lingkungan.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h4>Tautan Cepat</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white">Beranda</a></li>
+                            <li><a href="tentang.html" class="text-white">Tentang Kami</a></li>
+                            <li><a href="produk.html" class="text-white">Produk</a></li>
+                            <li><a href="galeri.html" class="text-white">Galeri</a></li>
+                            <li><a href="kontak.html" class="text-white">Kontak</a></li>
+                            <li><a href="pesanan.html" class="text-white">Pesanan</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Berlangganan</h4>
+                        <p>Dapatkan informasi terbaru tentang produk dan workshop kami.</p>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email Anda" aria-label="Email Anda" required>
+                            <button class="btn btn-outline-light" type="button" onclick="kirimEmail()">Daftar</button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="bg-light">
+                <div class="text-center">
+                    <p>&copy; 2025 Batik Alam. Hak Cipta Dilindungi.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
